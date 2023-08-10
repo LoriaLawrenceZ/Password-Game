@@ -40,7 +40,6 @@ export function checkReq3(pw) {
             return false;
         }
     }
-        
 }
 
 export function checkReq4(pw) {
@@ -70,9 +69,45 @@ export function checkReq5(pw) {
 }
 
 export function checkReq6(pw) {
+    let regex = /([1]{2,})|([2]{2,})|([3]{2,})|([4]{2,})|([5]{2,})|([6]{2,})|([7]{2,})|([8]{2,})|([9]{2,})|([0]{2,})/g;
+    let digitosSequenciados = pw.match(regex);
+
+    if(digitosSequenciados >= 1){
+        return false;
+    }
+    else{
+        return true;
+    }
 }
 
 export function checkReq7(pw) {
+    let regex = /\d/g;
+    let digitos = pw.match(regex);
+    let soma = 0;
+    let primo = true;
+
+    if(digitos === null){
+        return false;
+    }
+    else{
+        for (let index = 0; index < digitos.length; index++) {
+            soma += parseInt(digitos[index]);      
+        }
+
+        for (let i = 2; i < soma; i++){
+            if (soma % i === 0) {
+                primo = false;
+            }
+        }
+
+        if(primo){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
 }
 
 export function checkReq8(pw) {
