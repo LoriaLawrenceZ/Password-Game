@@ -12,7 +12,7 @@ var req10 = document.getElementById("req10");
 
 
 /*-----===FUNCTIONS===-----*/
-function modifyReq1(state, cleared){
+export function modifyReq1(state, cleared){
     if(state == true){
         req1.classList.remove("req-container-incomplete");
         req1.classList.add("req-container-complete");
@@ -29,7 +29,7 @@ function modifyReq1(state, cleared){
     }
 }
 
-function modifyReq2(state, cleared){
+export function modifyReq2(state, cleared){
     if(state == true){
         req2.classList.remove("req-container-incomplete");
         req2.classList.add("req-container-complete");
@@ -39,9 +39,9 @@ function modifyReq2(state, cleared){
         req2.classList.add("req-container-incomplete");
     }
 
-    if (cleared >= 1) {
+    if (cleared >= 2) {
         req3.classList.remove("disabled");
         req3.classList.add("active");
-        return 1;
+        return 2;
     }
 }

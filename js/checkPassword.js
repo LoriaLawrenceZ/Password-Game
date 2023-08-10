@@ -1,6 +1,6 @@
 /*-----===FUNCTIONS===-----*/
-function checkReq1(pw) {
-    if(pw.length >= 7){
+export function checkReq1(pw) {
+    if(pw.length >= 8){
         return true;
     }
     else{
@@ -8,7 +8,7 @@ function checkReq1(pw) {
     }
 }
 
-function checkReq2(pw) {
+export function checkReq2(pw) {
     let regex = /[a-zA-Z]/g;
     let letras = pw.match(regex);
 
