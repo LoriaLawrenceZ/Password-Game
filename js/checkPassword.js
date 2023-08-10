@@ -56,7 +56,9 @@ export function checkReq4(pw) {
 }
 
 export function checkReq5(pw) {
-    let paises = ["Argentina", "Bolívia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "França", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela"];
+    let paises = ["argentina", "bolívia", "brasil", "chile", "colômbia", "equador", "guiana", "frança", "paraguai", "peru", "suriname", "uruguai", "venezuela"];
+
+    pw = pw.toLowerCase();
 
     for (let index = 0; index < paises.length; index++) {
         if(pw.includes(paises[index])){
