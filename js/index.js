@@ -3,12 +3,15 @@ import * as modifier from "./modifyReq.js";
 
 /*-----===VARIABLES===-----*/
 var password = document.getElementById("pwgame-textarea");
+var chrCounter = document.querySelector(".pwgame-counter h3");
 var conditionClearCounter = 0;
 
 password.addEventListener("input", () => {
     var passwordContent = password.value;
     console.log(passwordContent);
     console.log(conditionClearCounter);
+
+    chrCounter.innerHTML = passwordContent.length;
 
     var state;
     var cleared = 0;
