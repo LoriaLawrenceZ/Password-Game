@@ -20,26 +20,64 @@ export function checkReq2(pw) {
     }
 }
 
-function checkReq3(pw) {
+export function checkReq3(pw) {
+    let regex = /\d/g;
+    let digitos = pw.match(regex);
+    let soma = 0;
+
+    if(digitos === null){
+        return false;
+    }
+    else{
+        for (let index = 0; index < digitos.length; index++) {
+            soma += parseInt(digitos[index]);      
+        }
+
+        if(soma >= 22){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+        
 }
 
-function checkReq4(pw) {
+export function checkReq4(pw) {
+    let regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/g;
+    let caracteresEspeciais = pw.match(regex);
+
+    if(caracteresEspeciais && caracteresEspeciais.length >= 4){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
-function checkReq5(pw) {
+export function checkReq5(pw) {
+    let paises = ["Argentina", "Bolívia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "França", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela"];
+
+    for (let index = 0; index < paises.length; index++) {
+        if(pw.includes(paises[index])){
+            return true;
+        }
+    }
+
+    return false;
 }
 
-function checkReq6(pw) {
+export function checkReq6(pw) {
 }
 
-function checkReq7(pw) {
+export function checkReq7(pw) {
 }
 
-function checkReq8(pw) {
+export function checkReq8(pw) {
 }
 
-function checkReq9(pw) {
+export function checkReq9(pw) {
 }
 
-function checkReq10(pw) {
+export function checkReq10(pw) {
 }

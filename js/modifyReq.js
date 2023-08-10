@@ -45,3 +45,137 @@ export function modifyReq2(state, cleared){
         return 2;
     }
 }
+
+export function modifyReq3(state, cleared){
+    if(state == true){
+        req3.classList.remove("req-container-incomplete");
+        req3.classList.add("req-container-complete");
+    }
+    else{
+        req3.classList.remove("req-container-complete");
+        req3.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 3) {
+        req4.classList.remove("disabled");
+        req4.classList.add("active");
+        return 3;
+    }
+}
+
+export function modifyReq4(state, cleared){
+    if(state == true){
+        req4.classList.remove("req-container-incomplete");
+        req4.classList.add("req-container-complete");
+    }
+    else{
+        req4.classList.remove("req-container-complete");
+        req4.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 4) {
+        req5.classList.remove("disabled");
+        req5.classList.add("active");
+        return 4;
+    }
+}
+
+export function modifyReq5(state, cleared){
+    if(state == true){
+        req5.classList.remove("req-container-incomplete");
+        req5.classList.add("req-container-complete");
+    }
+    else{
+        req5.classList.remove("req-container-complete");
+        req5.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 5) {
+        req6.classList.remove("disabled");
+        req6.classList.add("active");
+        return 5;
+    }
+}
+
+export function modifyReq6(state, cleared){
+    if(state == true){
+        req6.classList.remove("req-container-incomplete");
+        req6.classList.add("req-container-complete");
+    }
+    else{
+        req6.classList.remove("req-container-complete");
+        req6.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 6) {
+        req7.classList.remove("disabled");
+        req7.classList.add("active");
+        return 6;
+    }
+}
+
+export function modifyReq7(state, cleared){
+    if(state == true){
+        req7.classList.remove("req-container-incomplete");
+        req7.classList.add("req-container-complete");
+    }
+    else{
+        req7.classList.remove("req-container-complete");
+        req7.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 7) {
+        req8.classList.remove("disabled");
+        req8.classList.add("active");
+        return 7;
+    }
+}
+
+export function modifyReq8(state, cleared){
+    if(state == true){
+        req8.classList.remove("req-container-incomplete");
+        req8.classList.add("req-container-complete");
+    }
+    else{
+        req8.classList.remove("req-container-complete");
+        req8.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 8) {
+        req9.classList.remove("disabled");
+        req9.classList.add("active");
+        return 8;
+    }
+}
+
+export function modifyReq9(state, cleared){
+    if(state == true){
+        req9.classList.remove("req-container-incomplete");
+        req9.classList.add("req-container-complete");
+    }
+    else{
+        req9.classList.remove("req-container-complete");
+        req9.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 9) {
+        req10.classList.remove("disabled");
+        req10.classList.add("active");
+        return 9;
+    }
+}
+
+export function modifyReq10(state, cleared){
+    if(state == true){
+        req10.classList.remove("req-container-incomplete");
+        req10.classList.add("req-container-complete");
+    }
+    else{
+        req10.classList.remove("req-container-complete");
+        req10.classList.add("req-container-incomplete");
+    }
+
+    if (cleared >= 10) {
+        return 10;
+    }
+}
